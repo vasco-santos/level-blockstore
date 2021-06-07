@@ -1,0 +1,49 @@
+{
+  "name": "level-blockstore",
+  "version": "1.0.0",
+  "description": "Blockstore implementation with a level backend for content addressable data in ipfs-car",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "lint": "tslint 'src/*.ts?(x)'",
+    "test": "npm run test:node && npm run test:browser",
+    "test:node": "npm run build && mocha -r ts-node/register test/*.test.ts",
+    "test:browser": "npm run build && playwright-test test/*.test.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vasco-santos/level-blockstore.git"
+  },
+  "keywords": [
+    "ipfs",
+    "content-addressable",
+    "cid",
+    "car"
+  ],
+  "author": "vasco-santos",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vasco-santos/level-blockstore/issues"
+  },
+  "homepage": "https://github.com/vasco-santos/level-blockstore#readme",
+  "dependencies": {
+    "@ipld/car": "^2.1.0",
+    "ipfs-car": "vasco-santos/ipfs-car#feat/blockstore",
+    "level": "^7.0.0",
+    "multiformats": "^8.0.4",
+    "stream-to-it": "^0.2.3"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.18",
+    "@types/level": "^6.0.0",
+    "@types/mocha": "^8.2.2",
+    "assert": "^2.0.0",
+    "chai": "^4.3.4",
+    "mocha": "^8.4.0",
+    "playwright-test": "^5.0.0",
+    "ts-node": "^9.1.1",
+    "tslint": "^6.1.3",
+    "typescript": "^4.2.4",
+    "util": "^0.12.4"
+  }
+}
