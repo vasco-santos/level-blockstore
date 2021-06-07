@@ -15,5 +15,19 @@ This backend datastore can be used in `Node.js`, `Electron` and `Browser` enviro
 $ npm i level-blockstore
 ```
 
-## Usage
+## Usage with ipfs-car
 
+```js
+import { pack } from 'ipfs-car/pack'
+import { LevelBlockStore } from 'ipfs-car/blockstore/memory'
+
+const { root, out } = await pack({
+  input: [new Uint8Array([21, 31, 41])],
+  blockstore: new LevelBlockStore()
+})
+
+const carParts = []
+for await (const part of out) {
+  carParts.push(part)
+}
+```
