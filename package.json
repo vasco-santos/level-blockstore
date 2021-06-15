@@ -28,7 +28,7 @@
   "homepage": "https://github.com/vasco-santos/level-blockstore#readme",
   "dependencies": {
     "@ipld/car": "^2.1.0",
-    "ipfs-car": "vasco-santos/ipfs-car#feat/blockstore",
+    "ipfs-car": "^0.2.3",
     "level": "^7.0.0",
     "multiformats": "^8.0.4",
     "stream-to-it": "^0.2.3"
