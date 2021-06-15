@@ -1,6 +1,6 @@
 {
   "name": "level-blockstore",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Blockstore implementation with a level backend for content addressable data in ipfs-car",
   "main": "index.js",
   "scripts": {
